@@ -1,0 +1,31 @@
+{
+  "name": "@pureproxy/utils",
+  "version": "1.0.0",
+  "description": "PureProxy utilities",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pureproxy/utils.git"
+  },
+  "keywords": [
+    "proxy",
+    "server",
+    "stream",
+    "http",
+    "https",
+    "websocket",
+    "websockets"
+  ],
+  "author": "pdparchitect",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pureproxy/utils/issues"
+  },
+  "homepage": "https://github.com/pureproxy/utils#readme"
+}
