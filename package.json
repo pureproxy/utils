@@ -2,17 +2,16 @@
   "name": "@pureproxy/utils",
   "version": "1.0.1",
   "description": "PureProxy utilities",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "true"
-  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pureproxy/utils.git"
   },
+  "bugs": {
+    "url": "https://github.com/pureproxy/utils/issues"
+  },
+  "homepage": "https://github.com/pureproxy/utils#readme",
+  "author": "pdparchitect",
   "keywords": [
     "proxy",
     "server",
@@ -22,10 +21,27 @@
     "websocket",
     "websockets"
   ],
-  "author": "pdparchitect",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pureproxy/utils/issues"
+  "type": "module",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
   },
-  "homepage": "https://github.com/pureproxy/utils#readme"
+  "scripts": {
+    "build": "run-s build:*",
+    "build:types": "npx -p typescript tsc --declaration --emitDeclarationOnly --outDir types",
+    "format": "run-s format:*",
+    "format:pkg": "npx format-package -w",
+    "format:src": "npx prettier -w lib/",
+    "lint": "eslint lib/",
+    "setup": "husky install",
+    "test": "true"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "@types/node": "^18.7.15",
+    "eslint": "8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-require-path-exists": "^1.1.9",
+    "npm-run-all": "^4.1.5"
+  }
 }
